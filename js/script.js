@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function()  { //menunggu terloadin
         calculateBMI();
         toggleContents(); // Panggil toggleContents setelah menghitung BMI
     });
-
+    //tes
     downloadButton.addEventListener('click', function() {
         downloadResult();
     });
