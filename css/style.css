@@ -1,0 +1,309 @@
+.main{
+    justify-content: space-around;
+    padding-top: 50px;
+}
+.s2{
+    text-align: center;
+    flex: 1;
+    padding: 25px;
+    background-color:aliceblue;
+    border: 1px black solid;
+    padding-bottom: 100px;
+}
+.s1{
+
+    flex: 1;
+    background-color: aliceblue;
+    padding: 20px;
+    border: 1px black solid;
+}
+
+body{
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 400px;
+    padding: 50px;
+    border: 2px black solid;
+
+}
+
+.HasilBmiNya{
+    font-size: 16px;
+}
+.submit_button, .reset_button {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: large;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.submit_button {
+    background-color: rgb(101, 236, 101);
+    color: rgb(255, 255, 255);
+}
+
+.reset_button {
+    background-color: rgb(255, 65, 65);
+    color: white;
+}
+.submit_button:hover, .reset_button:hover {
+    background-color: rgba(0, 0, 0, 0.1); 
+}
+.form{
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=number]:focus {
+    background-color: lightblue;
+}
+.header-up{
+    border-bottom: solid black 2px;
+    padding-bottom: 30px;
+}
+.data{
+    display: flex;
+    background-color: azure;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.data1{
+    flex: 1;
+}
+.data2{
+    flex: 1 ;
+}
+#hasilBMI {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.result-label {
+    font-size: 24px;
+}
+
+.bmi {
+    font-size: 48px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+}
+
+.HasilKategori {
+    font-size: 24px; 
+    color: #888; 
+}
+#downloadButton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#downloadButton:hover {
+    background-color: #45a049;
+}
+.seleksi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.seleksi p {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.seleksi label {
+    text-align: center;
+}
+
+.seleksi img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%; 
+}
+
+.seleksi input[type="radio"] {
+    display: none; 
+}
+
+.seleksi input[type="radio"]:checked + label {
+    border: 2px solid #007bff; 
+    padding: 5px;
+}
+.toggle_content {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+}
+
+.toggle_content.show {
+    display: block;
+    max-height: 500px; /* Atur maksimum tinggi yang ingin ditampilkan */
+}
+
+/* Atur tampilan toggle button */
+.toggle_button {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle_button:hover {
+    background-color: #45a049;
+}
+.info-bmi {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: block;
+}
+.tebel {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.tebel th, .tebel td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+.tebel th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+.tebel td {
+    font-size: 14px;
+}
+.tebel tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.tebel tr:hover {
+    background-color: #f1f1f1;
+}
+.kategori-bmi-description {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+}
+.kategori-bmi-description p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.kategori-bmi-description strong {
+    font-weight: bold;
+    color: #333;
+}
+.consult-doctor {
+    text-align: center;
+    margin-top: 20px;
+}
+.consult-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #45a049;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.consult-button:hover {
+    background-color: #45a049;
+}
+.Penyakit{
+    text-align: center;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .main {
+        padding-top: 10px;
+        justify-content: center; 
+    }
+
+    .s1, .s2 {
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+    .s2 {
+        padding-bottom: 50px;
+    }
+
+    .data, .toggle_content {
+        padding: 5px;
+    }
+
+    .tebel th, .tebel td {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    #downloadButton, .toggle_button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .kategori-bmi-description p {
+        font-size: 14px;
+    }
+
+    .consult-doctor {
+        margin-top: 10px;
+    }
+
+    .seleksi img {
+        width: 100px;
+    }
+    .HasilBmiNya {
+        font-size: 14px;
+    }
+
+    .header-up {
+        padding-bottom: 10px;
+    }
+
+    .form {
+        padding: 5px;
+    }
+
+    .submit_button, .reset_button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

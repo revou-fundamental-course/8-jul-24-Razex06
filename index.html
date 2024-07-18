@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="/css/style.css"> <!--Memasukkan CSS-->
+    <script src="/js/script.js" defer></script> <!--Memasukkan JS-->
+</head>
+
+<body>
+    <header>
+        <h1 class="header-up"><center>BMI Calculator</h1> <!--Judul-->
+    </header>
+    <main>
+
+        <article class="article">
+
+            <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan. berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk hitung sekarang di kalkulator BMI</p>
+            <!-- Artikel -->
+
+        </article>
+        <section class="main">
+            <section>
+
+                <section>
+
+                    <form class="s1">
+
+                        <div class="seleksi"> <!--Memasukkan data jenis kelamin-->
+                            <p>Jenis Kelamin</p>
+                            <input type="radio" id="sex-select-man" name="gender" class="gender" value="male"> <label for="sex-select-man"><img src="/assets/boy.png" width="20px" height="15px"> <br>Laki-Laki</label> &emsp;
+                            <input type="radio" id="sex-select-woman" class="gender" name="gender" value="female"> <label for="sex-select-woman"> <img src="/assets/female.jpg" width="20px" height="20px"><br> Wanita</label>
+                        </div>
+                        <br>
+                        <div> <!--Memasukkan data berat badan-->
+                            <label for="berat-badan">Berat Badan (KG)</label> <br>
+                            <input type="number" id="berat-badan" required>
+                        </div>
+
+                        <div> <!--Memasukkan data usia-->
+                            <label for="usia">Usia (Tahun)</label> <br>
+                            <input type="number" id="usia" required>
+                        </div>
+
+                        <div> <!--Memasukkan data tinggi badan-->
+                            <label for="tinggi-badan">Tinggi badan (cm)</label> <br>
+                            <input type="number" id="tinggi-badan" required>
+                        </div>
+
+                        <div class="button-awal"> <!--Submit atau mereset data-->
+                            <button type="button" class="submit_button" onclick="calculateBMI()">Submit BMI</button>
+                            <button type="reset" class="reset_button">Reset</button>
+                        </div>
+
+                    </form>
+
+
+                </section>
+
+                <section class="data">
+                    <div class="data1">
+                        <p>Jenis Kelamin : </p>
+                        <p>Berat Badan : </p>
+                    </div>
+
+                    <div class="data2">
+                        <p>Usia         :   </p>
+                        <p>Tinggi Badan : </p>
+                    </div>
+                </section>
+
+                <section>
+                    <article class="s2">
+
+                        <section id="hasilBMI">
+                            <p class="result-label">BMI Anda:</p>
+                            <p class="bmi"></p>
+                            <p class="HasilKategori"></p>
+                        </section>
+                        <button id="downloadButton" class="download_button" onclick="downloadResult()">Download Result</button>
+                    </article>
+                </section>
+            </section>
+            
+            <button id="toggleButton" class="toggle_button" onclick="toggleContent()">Tampilkan Keunggulan Fitur</button>
+
+            <section id="toggleContent" class="toggle_content">
+                <h2>Keunggulan Fitur Kalkulator BMI</h2>
+                <ul>
+                    <li>Menghitung berat badan.</li>
+                    <li>Menentukann kategori berat badan ideal atau tidak.</li>
+                    <li>Mempersiapkan program penurunan berat badan.</li>
+                </ul>
+
+                <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
+                <p>Kalkulator akan memberi Anda gambaran tentang permbandingan berat badan Anda dengan nilai umus. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan anda (dalam kategori kilogram) dibagi dengan kuadrat tinggi badan anda (dalam meter) atau BMI = kg/M<sup>2</sup></p>
+            </section>
+
+        </section>
+        <section id="infoBMI" class="info-bmi"></section>
+
+        <section>
+            <h2>Kategori BMI</h2>
+            <table class="tebel">
+                <tr>
+                    <th>Range BMI</th>
+                    <th>Kategori</th>
+                    <th>Keterangan</th>
+                </tr>
+                <tr>
+                    <td>&lt; 18.5</td>
+                    <td>Underweight</td>
+                    <td>Kurang berat badan</td>
+                </tr>
+                <tr>
+                    <td>18.5 - 24.9</td>
+                    <td>Normal</td>
+                    <td>Berat badan ideal</td>
+                </tr>
+                <tr>
+                    <td>25 - 29.9</td>
+                    <td>Overweight</td>
+                    <td>Kelebihan berat badan</td>
+                </tr>
+                <tr>
+                    <td>&ge; 30</td>
+                    <td>Obese</td>
+                    <td>Obesitas</td>
+                </tr>
+            </table>
+
+            <div class="kategori-bmi-description">
+                <p><strong>Underweight:</strong> <br> Berat badan Anda terlalu rendah. Konsultasikan ke dokter untuk mengatasi asupan gizi Anda!</p>
+                <p><strong>Normal:</strong> <br> Berat badan Anda dalam rentang ideal. Perthanakan!</p>
+                <p><strong>Overweight:</strong> <br> Berat badan Anda melebihi rentang ideal. Sebaiknya jaga kesehatan dan jaga pola hidup</p>
+                <p><strong>Obese:</strong> <br> Anda memiliki obesitas, yang berarti jauh dari ideal. segera konsultasikan ke dokter!</p>
+                <p class="Penyakit">Beberapa penyakit yang mungkin anda alami</p>
+                <ul>
+                    <li>Diabetes</li>
+                    <li>Hipertensi</li>
+                    <li>Sakit jantung</li>
+                    <li>Osteoarthritis</li>
+                </ul>
+            </div>
+
+            <div class="consult-doctor">
+                <a href="https://www.google.com/search?q=konsultasi+dokter&oq=konsultasi+dokter&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQIxgnMgcIAhAAGIAEMgcIAxAAGIAEMgcIBBAAGIAEMgcIBRAAGIAEMgoIBhAAGLEDGIAEMgcIBxAAGIAEMgcICBAAGIAEMgcICRAAGIAE0gEJMTMyMDJqMGo5qAIAsAIB&sourceid=chrome&ie=UTF-8" class="consult-button">Konsultasi ke Dokter</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
